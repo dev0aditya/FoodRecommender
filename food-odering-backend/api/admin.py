@@ -7,7 +7,7 @@ class FoodItemAdmin(admin.ModelAdmin):
     list_display = ('name', 'price', 'category', 'image_preview')  # Columns to display in the admin list view
     list_filter = ('category',)  # Filter by category
     search_fields = ('name',)  # Search by name
-    fields = ('name', 'price', 'category', 'image')  # Fields in the edit form
+    fields = ('name', 'price', 'category', 'ingredients', 'image',)  # Fields in the edit form
 
     # Method to display a preview of the image
     def image_preview(self, obj):

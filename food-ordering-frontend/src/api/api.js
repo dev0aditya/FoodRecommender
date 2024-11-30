@@ -51,3 +51,13 @@ export const fetchUserOrders = async (token) => {
   });
   return response.data;
 };
+
+export const fetchRecommendations = async (token) => {
+  if (!token) throw new Error("Token is missing");
+  const response = await axios.get(`${API_BASE_URL}recommendations/`, {
+    headers: {
+      Authorization: `Token ${token}`,
+    },
+  });
+  return response.data;
+};

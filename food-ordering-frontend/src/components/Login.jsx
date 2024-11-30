@@ -22,8 +22,8 @@ const Login = ({ setToken }) => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
-      <form className="bg-white p-6 rounded shadow-md" onSubmit={handleSubmit}>
+    <div className="flex items-center justify-center h-screen ">
+      <form className=" w-1/5 p-6 rounded shadow-xl" onSubmit={handleSubmit}>
         <h2 className="text-2xl font-bold mb-4">Login</h2>
         {error && <p className="text-red-500 mb-2">{error}</p>}
         <div className="mb-4">
@@ -50,6 +50,15 @@ const Login = ({ setToken }) => {
         >
           Login
         </button>
+        <p className="mt-4 text-sm">
+          New Here?{" "}
+          <span
+            className="text-blue-500 cursor-pointer hover:underline"
+            onClick={() => navigate("/register")}
+          >
+            Register
+          </span>
+        </p>
       </form>
     </div>
   );

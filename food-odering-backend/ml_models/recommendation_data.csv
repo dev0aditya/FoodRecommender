@@ -1,0 +1,7 @@
+user_id,food_id,interaction,ingredients
+2,1,like,"Rice, water"
+2,3,like,"Curry, bread"
+2,2,dislike,"Flour, blueberries, milk, sugar, baking powder, butter"
+3,6,like,"Fruit juices, soda, herbs, syrups, garnishes"
+3,3,like,"Curry, bread"
+3,8,like,"Coffee beans, water"

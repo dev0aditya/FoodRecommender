@@ -14,10 +14,17 @@ class FoodItem(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     category = models.CharField(max_length=50, choices=CATEGORY_CHOICES)
     image = models.ImageField(upload_to='food_images/', blank=True, null=True)  # Image upload field
+    likes = models.ManyToManyField(
+        settings.AUTH_USER_MODEL, related_name='liked_food_items', blank=True
+    )
+    dislikes = models.ManyToManyField(
+        settings.AUTH_USER_MODEL, related_name='disliked_food_items', blank=True
+    )
+    ingredients = models.TextField(blank=True, null=True)  # Add ingredients field
 
     def __str__(self):
         return self.name
-
+        
 class Order(models.Model):
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
